@@ -1,0 +1,135 @@
+/* === Records Page === */
+.quota-section {
+    margin-bottom: var(--space-xl);
+}
+
+.quota-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.quota-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border-light);
+}
+
+.quota-card-label {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+}
+
+.quota-card-value {
+    font-size: var(--text-xl);
+    font-weight: 700;
+}
+
+.quota-card-meta {
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    margin-top: var(--space-sm);
+}
+
+.quota-progress {
+    margin-top: var(--space-sm);
+}
+
+.position-summary {
+    margin-bottom: var(--space-xl);
+}
+
+.position-table {
+    width: 100%;
+}
+
+.position-table th,
+.position-table td {
+    padding: var(--space-sm) var(--space-md);
+    text-align: right;
+    font-size: var(--text-sm);
+}
+
+.position-table th:first-child,
+.position-table td:first-child {
+    text-align: left;
+}
+
+/* Transaction list */
+.txn-list-item {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+}
+
+.txn-list-item:active {
+    background: var(--color-bg);
+}
+
+.txn-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.txn-currency {
+    font-weight: 600;
+    font-size: var(--text-base);
+}
+
+.txn-date {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+.txn-amount {
+    text-align: right;
+}
+
+.txn-amount-foreign {
+    font-weight: 600;
+    font-size: var(--text-base);
+}
+
+.txn-amount-cny {
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+}
+
+.txn-rate {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-align: right;
+}
+
+.txn-actions {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+/* Record detail modal */
+.txn-detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.txn-detail-label {
+    color: var(--color-text-secondary);
+    font-size: var(--text-sm);
+}
+
+.txn-detail-value {
+    font-weight: 500;
+    font-size: var(--text-sm);
+}

@@ -1,0 +1,227 @@
+/* === Dashboard Page === */
+.dashboard-fund-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+@media (min-width: 480px) {
+    .dashboard-fund-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .dashboard-fund-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.fund-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border-light);
+}
+
+.fund-card-currency {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-sm);
+}
+
+.fund-card-code {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 2px var(--space-sm);
+    background: var(--color-primary-bg);
+    border-radius: var(--radius-sm);
+}
+
+.fund-card-holding {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    margin: var(--space-sm) 0;
+}
+
+.fund-card-cost {
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+}
+
+.fund-card-pnl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-divider);
+}
+
+.fund-card-pnl-value {
+    font-size: var(--text-lg);
+    font-weight: 600;
+}
+
+.fund-card-pnl-value.positive { color: var(--color-danger); }
+.fund-card-pnl-value.negative { color: var(--color-success); }
+
+.fund-card-pnl-label {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+/* Rate Board */
+.rate-board {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border-light);
+    overflow: hidden;
+}
+
+.rate-board-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-lg);
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.rate-board-title {
+    font-size: var(--text-base);
+    font-weight: 600;
+}
+
+.rate-board-updated {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+.rate-table {
+    width: 100%;
+}
+
+.rate-table th,
+.rate-table td {
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+}
+
+.rate-table th {
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rate-table td {
+    font-size: var(--text-sm);
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.rate-table .rate-currency {
+    font-weight: 600;
+}
+
+.rate-table .rate-value {
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+}
+
+.rate-change.up { color: var(--color-danger); }
+.rate-change.down { color: var(--color-success); }
+
+/* Chart Container */
+.chart-container {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border-light);
+    padding: var(--space-lg);
+}
+
+.chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.chart-title {
+    font-size: var(--text-base);
+    font-weight: 600;
+}
+
+.chart-controls {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.chart-period-btn {
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--text-xs);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    transition: all 0.2s;
+    min-height: 32px;
+}
+
+.chart-period-btn.active {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+}
+
+.chart-canvas-wrapper {
+    position: relative;
+    width: 100%;
+    height: 280px;
+}
+
+@media (min-width: 768px) {
+    .chart-canvas-wrapper {
+        height: 360px;
+    }
+}
+
+/* Dashboard Reminders */
+.dashboard-reminders {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border-light);
+    padding: var(--space-lg);
+}
+
+.dashboard-reminders .reminder-mini {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.dashboard-reminders .reminder-mini:last-child {
+    border-bottom: none;
+}
+
+.reminder-mini-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.reminder-mini-dot.cost    { background: var(--color-primary); }
+.reminder-mini-dot.trend   { background: var(--color-warning); }
+.reminder-mini-dot.macro   { background: var(--color-danger); }
+.reminder-mini-dot.fund    { background: var(--color-success); }

@@ -1,0 +1,75 @@
+:root {
+    /* Primary palette */
+    --color-primary: #1a73e8;
+    --color-primary-light: #4a90d9;
+    --color-primary-dark: #1557b0;
+    --color-primary-bg: #e8f0fe;
+
+    /* Semantic colors */
+    --color-success: #0d904f;
+    --color-success-bg: #e6f4ea;
+    --color-danger: #d93025;
+    --color-danger-bg: #fce8e6;
+    --color-warning: #f9ab00;
+    --color-warning-bg: #fef7e0;
+    --color-info: #1967d2;
+    --color-info-bg: #e8f0fe;
+
+    /* Neutral colors */
+    --color-bg: #f8f9fa;
+    --color-surface: #ffffff;
+    --color-text: #202124;
+    --color-text-secondary: #5f6368;
+    --color-text-muted: #9aa0a6;
+    --color-border: #dadce0;
+    --color-border-light: #e8eaed;
+    --color-divider: #f1f3f4;
+
+    /* Spacing scale */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 12px;
+    --space-lg: 16px;
+    --space-xl: 20px;
+    --space-2xl: 24px;
+    --space-3xl: 32px;
+    --space-4xl: 40px;
+
+    /* Border radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+    --shadow-xl: 0 20px 25px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.04);
+
+    /* Touch target */
+    --touch-target: 44px;
+
+    /* Font sizes */
+    --text-xs: 0.75rem;
+    --text-sm: 0.8125rem;
+    --text-base: 0.9375rem;
+    --text-lg: 1.0625rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+
+    /* Safe area */
+    --safe-area-top: env(safe-area-inset-top, 0px);
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-area-left: env(safe-area-inset-left, 0px);
+    --safe-area-right: env(safe-area-inset-right, 0px);
+
+    /* Header height */
+    --header-height: 56px;
+    /* Bottom nav height */
+    --bottom-nav-height: 60px;
+    /* Sidebar width */
+    --sidebar-width: 240px;
+}

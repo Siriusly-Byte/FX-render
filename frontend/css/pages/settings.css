@@ -1,0 +1,85 @@
+/* === Settings Page === */
+.settings-group {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border-light);
+}
+
+.settings-group-title {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-divider);
+    min-height: var(--touch-target);
+    gap: var(--space-md);
+}
+
+.settings-row:last-child {
+    border-bottom: none;
+}
+
+.settings-label {
+    font-size: var(--text-sm);
+    color: var(--color-text);
+}
+
+.settings-description {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-top: 2px;
+}
+
+.settings-control {
+    flex-shrink: 0;
+}
+
+.settings-control .form-input,
+.settings-control .form-select {
+    width: 160px;
+    text-align: right;
+}
+
+/* Danger zone */
+.settings-danger {
+    border: 1px solid var(--color-danger);
+}
+
+.settings-danger .settings-group-title {
+    color: var(--color-danger);
+    border-bottom-color: var(--color-danger-bg);
+}
+
+/* Export section */
+.export-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.export-info {
+    flex: 1;
+}
+
+.export-name {
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.export-desc {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}

@@ -1,0 +1,141 @@
+/* === Calculator Page === */
+.calc-section {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border-light);
+}
+
+.calc-section-title {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calc-toggle-btn {
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.calc-toggle-btn .arrow {
+    transition: transform 0.2s;
+}
+
+.calc-toggle-btn .arrow.open {
+    transform: rotate(180deg);
+}
+
+.calc-multi-txns {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.calc-multi-txns.open {
+    max-height: 2000px;
+}
+
+.calc-txn-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--color-bg);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-sm);
+    position: relative;
+}
+
+@media (min-width: 480px) {
+    .calc-txn-row {
+        grid-template-columns: 2fr 1fr 1fr auto;
+    }
+}
+
+.calc-txn-remove {
+    position: absolute;
+    top: var(--space-xs);
+    right: var(--space-xs);
+    color: var(--color-danger);
+    font-size: var(--text-sm);
+}
+
+.calc-add-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-primary);
+    font-size: var(--text-sm);
+    padding: var(--space-sm) 0;
+}
+
+/* Result Section */
+.calc-result-card {
+    background: var(--color-primary-bg);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+.calc-result-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+}
+
+.calc-result-value {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.calc-scenario-table {
+    width: 100%;
+    margin-top: var(--space-lg);
+}
+
+.calc-scenario-table th,
+.calc-scenario-table td {
+    padding: var(--space-md);
+    text-align: right;
+    font-size: var(--text-sm);
+}
+
+.calc-scenario-table th {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    border-bottom: 2px solid var(--color-border-light);
+}
+
+.calc-scenario-table td {
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.calc-scenario-table th:first-child,
+.calc-scenario-table td:first-child {
+    text-align: left;
+}
+
+.scenario-profit { color: var(--color-danger); font-weight: 600; }
+.scenario-loss   { color: var(--color-success); font-weight: 600; }
+
+.calc-conclusion {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.calc-conclusion-title {
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}

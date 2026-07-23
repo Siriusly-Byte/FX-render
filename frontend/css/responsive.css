@@ -1,0 +1,176 @@
+/* ============================================
+   Mobile-First Responsive Styles
+   Base: <768px (mobile, single column)
+   Tablet: 768px-1023px (medium, 2-column)
+   Desktop: ≥1024px (large, multi-column + sidebar)
+   ============================================ */
+
+/* === Tablet (≥768px) === */
+@media (min-width: 768px) {
+    /* Show sidebar, hide bottom nav and menu toggle */
+    .sidebar {
+        display: flex;
+        position: fixed;
+        transform: translateX(0);
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .bottom-nav {
+        display: none;
+    }
+
+    /* Adjust main content for sidebar */
+    #app-main {
+        margin-left: var(--sidebar-width);
+        padding-bottom: var(--space-xl);
+    }
+
+    /* Adjust header */
+    #app-header {
+        left: var(--sidebar-width);
+    }
+
+    /* Center auth forms */
+    #auth-overlay {
+        left: var(--sidebar-width);
+    }
+
+    /* Two-column grids */
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Form rows side by side */
+    .form-row-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* FAB adjust position */
+    .fab {
+        bottom: var(--space-xl);
+    }
+}
+
+/* === Desktop (≥1024px) === */
+@media (min-width: 1024px) {
+    .card-grid.col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-grid.col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Expand content width */
+    #app-content {
+        padding: var(--space-md);
+    }
+
+    /* Page header with actions */
+    .page-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: var(--space-xl);
+    }
+
+    /* Data table larger */
+    .data-table th,
+    .data-table td {
+        padding: var(--space-md) var(--space-lg);
+    }
+}
+
+/* === Large Desktop (≥1440px) === */
+@media (min-width: 1440px) {
+    #app-content {
+        max-width: 1400px;
+    }
+}
+
+/* === Mobile Sidebar Overlay === */
+@media (max-width: 767px) {
+    .sidebar {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: var(--sidebar-width);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 300;
+        box-shadow: var(--shadow-xl);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    /* Backdrop when sidebar is open on mobile */
+    .sidebar-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 250;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .sidebar-backdrop.visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+/* === Safe Area Adaptation === */
+@supports (padding-top: env(safe-area-inset-top)) {
+    #app-header {
+        padding-top: var(--safe-area-top);
+    }
+
+    .bottom-nav {
+        padding-bottom: var(--safe-area-bottom);
+    }
+
+    #app-main {
+        padding-bottom: calc(var(--bottom-nav-height) + var(--space-lg) + var(--safe-area-bottom));
+    }
+
+    .sidebar {
+        padding-top: var(--safe-area-top);
+    }
+}
+
+@media (min-width: 768px) {
+    @supports (padding-top: env(safe-area-inset-top)) {
+        #app-main {
+            padding-bottom: calc(var(--space-xl) + var(--safe-area-bottom));
+        }
+    }
+}
+
+/* === Print Styles === */
+@media print {
+    #app-header,
+    .bottom-nav,
+    .sidebar,
+    .fab,
+    #toast-container {
+        display: none !important;
+    }
+
+    #app-main {
+        margin: 0;
+        padding: 0;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
