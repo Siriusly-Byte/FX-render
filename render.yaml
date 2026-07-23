@@ -5,7 +5,7 @@ services:
     region: singapore
     plan: free
     buildCommand: pip install -r backend/requirements.txt
-    startCommand: cd backend && python -m gunicorn wsgi:app --bind 0.0.0.0:$PORT --workers 2 --timeout 120
+    startCommand: pip install -r backend/requirements.txt && cd backend && gunicorn wsgi:app --bind 0.0.0.0:$PORT --workers 2 --timeout 120
 
     envVars:
       - key: FLASK_ENV
