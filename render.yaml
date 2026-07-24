@@ -5,7 +5,8 @@ services:
     region: singapore
     plan: free
     buildCommand: pip install -r backend/requirements.txt
-    startCommand: python3 backend/wsgi.py
+    startCommand: cd backend && /opt/render/project/src/.venv/bin/python wsgi.py
+
 
 
     envVars:
