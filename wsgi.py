@@ -1,5 +1,8 @@
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'backend'))
+import sys
+import os
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'backend'))
+
 from app import create_app
 
 config_name = 'prod' if os.environ.get('FLASK_ENV') == 'production' else 'dev'
