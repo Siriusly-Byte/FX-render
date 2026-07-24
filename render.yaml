@@ -5,7 +5,8 @@ services:
     region: singapore
     plan: free
     buildCommand: pip install -r backend/requirements.txt
-    startCommand: cd backend && python wsgi.py
+    startCommand: python backend/wsgi.py
+
 
     envVars:
       - key: FLASK_ENV
