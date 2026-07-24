@@ -4,11 +4,8 @@ services:
     env: python
     region: singapore
     plan: free
-    buildCommand: pip install -r backend/requirements.txt
-    startCommand: cd backend && /opt/render/project/src/.venv/bin/python wsgi.py
-
-
-
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn wsgi:app --bind 0.0.0.0:$PORT --timeout 120
     envVars:
       - key: FLASK_ENV
         value: production
@@ -16,5 +13,3 @@ services:
         generateValue: true
       - key: JWT_SECRET_KEY
         generateValue: true
-      - key: DATABASE_URL
-        value: sqlite:////opt/render/project/src/backend/prod.db
